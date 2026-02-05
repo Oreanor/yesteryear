@@ -38,7 +38,12 @@ const TRANSLATIONS = {
     searchPlaceholder: 'Поиск по названию, году, коду...',
     searchNoResults: 'Ничего не найдено',
     favorites: 'Избранное',
-    noFavorites: 'Нет избранных'
+    noFavorites: 'Нет избранных',
+    infographic: 'Инфографика',
+    yearModalTitle: 'Модели за {year} год',
+    infographicModelCol: 'Модель',
+    infographicChartCount: 'шт',
+    infographicChartLabel: 'Кол-во моделей за год'
   },
   en: {
     loadJson: 'Load JSON',
@@ -74,7 +79,12 @@ const TRANSLATIONS = {
     searchPlaceholder: 'Search by name, year, code...',
     searchNoResults: 'No results',
     favorites: 'Favorites',
-    noFavorites: 'No favorites'
+    noFavorites: 'No favorites',
+    infographic: 'Infographic',
+    yearModalTitle: 'Models for {year}',
+    infographicModelCol: 'Model',
+    infographicChartCount: 'pcs',
+    infographicChartLabel: 'Models per year'
   },
   pt: {
     loadJson: 'Carregar JSON',
@@ -110,7 +120,12 @@ const TRANSLATIONS = {
     searchPlaceholder: 'Pesquisar por nome, ano, código...',
     searchNoResults: 'Nenhum resultado',
     favorites: 'Favoritos',
-    noFavorites: 'Sem favoritos'
+    noFavorites: 'Sem favoritos',
+    infographic: 'Infográfico',
+    yearModalTitle: 'Modelos de {year}',
+    infographicModelCol: 'Modelo',
+    infographicChartCount: 'un',
+    infographicChartLabel: 'Modelos por ano'
   }
 };
 

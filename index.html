@@ -4,15 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Каталог</title>
-  <link rel="stylesheet" href="theme-colors.css">
-  <link rel="stylesheet" href="common.css">
-  <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="editor.css">
-  <script src="theme.js"></script>
+  <link rel="stylesheet" href="css/theme-colors.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/editor.css">
+  <script src="js/theme.js"></script>
 </head>
 <body>
   <div class="toolbar">
-    <button type="button" id="modeToggle" class="mode-toggle">Каталог</button>
+    <select id="modeSelect" class="mode-select">
+      <option value="gallery" data-t="catalog">Каталог</option>
+      <option value="editor" data-t="editor">Редактор</option>
+      <option value="infographic" data-t="infographic">Инфографика</option>
+    </select>
     <input type="file" id="fileInput" accept=".json" style="display:none">
     <select id="sortSelect">
       <option value="name" data-t="sortByName">По названию</option>
@@ -47,9 +51,24 @@
       <button type="button" class="modal-nav modal-nav-left" id="modalPrev">‹</button>
       <button type="button" class="modal-nav modal-nav-right" id="modalNext">›</button>
       <div class="modal" id="modal">
-        <button type="button" class="modal-close" id="modalClose">×</button>
-        <div id="modalContent"></div>
+        <div class="modal-header">
+          <div class="modal-title" id="modalTitle"></div>
+          <button type="button" class="modal-close" id="modalClose">×</button>
+        </div>
+        <div class="modal-body">
+          <div id="modalContent"></div>
+        </div>
       </div>
+    </div>
+  </div>
+
+  <div id="viewInfographic" class="view hidden">
+    <div class="infographic-wrap">
+      <div class="infographic-content">
+        <div class="infographic-grid" id="infographicGrid"></div>
+        <div class="infographic-chart" id="infographicChart"></div>
+      </div>
+      <div class="infographic-popover" id="infographicPopover"></div>
     </div>
   </div>
 
@@ -71,9 +90,27 @@
     </div>
   </div>
 
+  <div class="modal-overlay" id="yearModalOverlay" aria-hidden="true">
+    <div class="modal modal-year" id="yearModal">
+      <div class="modal-header">
+        <h3 class="modal-title" id="yearModalTitle">1965</h3>
+        <button type="button" class="modal-close" id="yearModalClose">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="gallery-container">
+          <div class="gallery" id="yearModalGallery"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="toast" id="toast"></div>
 
-  <script src="translations.js"></script>
-  <script src="app.js"></script>
+  <script src="js/translations.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/editor.js"></script>
+  <script src="js/infographic.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>

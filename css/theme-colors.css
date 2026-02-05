@@ -33,6 +33,10 @@
   --mode-toggle-bg: rgb(34, 34, 34);
   --mode-toggle-text: rgb(255, 255, 255);
   --mode-toggle-hover-bg: rgb(51, 51, 51);
+  --infographic-hover: rgba(0, 102, 204, 0.2);
+  --infographic-selected: rgba(0, 102, 204, 0.3);
+  --chart-color-min: 173, 216, 230;
+  --chart-color-max: 0, 102, 204;
   --transition-fast: 0.15s ease;
 }
 
@@ -70,5 +74,9 @@
   --mode-toggle-bg: rgb(224, 224, 224);
   --mode-toggle-text: rgb(26, 26, 26);
   --mode-toggle-hover-bg: rgb(255, 255, 255);
+  --infographic-hover: rgba(106, 158, 255, 0.25);
+  --infographic-selected: rgba(106, 158, 255, 0.35);
+  --chart-color-min: 100, 140, 200;
+  --chart-color-max: 106, 158, 255;
   --transition-fast: 0.15s ease;
 }
