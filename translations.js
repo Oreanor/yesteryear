@@ -1,6 +1,6 @@
 // ─── Config ─────────────────────────────────────────────────────────────
 const LANG_KEY = 'mbx_lang';
-const LANG_DEFAULT = 'ru';
+const LANG_DEFAULT = 'en';
 const LANG_VALID = ['ru', 'en', 'pt'];
 
 const TRANSLATIONS = {
@@ -34,7 +34,11 @@ const TRANSLATIONS = {
     copiedToClipboard: 'Скопировано в буфер',
     fileDownloaded: 'Файл скачан',
     linkWord: 'ССЫЛКА',
-    pageTitle: 'Каталог'
+    pageTitle: 'Каталог',
+    searchPlaceholder: 'Поиск по названию, году, коду...',
+    searchNoResults: 'Ничего не найдено',
+    favorites: 'Избранное',
+    noFavorites: 'Нет избранных'
   },
   en: {
     loadJson: 'Load JSON',
@@ -66,7 +70,11 @@ const TRANSLATIONS = {
     copiedToClipboard: 'Copied to clipboard',
     fileDownloaded: 'File downloaded',
     linkWord: 'LINK',
-    pageTitle: 'Catalog'
+    pageTitle: 'Catalog',
+    searchPlaceholder: 'Search by name, year, code...',
+    searchNoResults: 'No results',
+    favorites: 'Favorites',
+    noFavorites: 'No favorites'
   },
   pt: {
     loadJson: 'Carregar JSON',
@@ -98,7 +106,11 @@ const TRANSLATIONS = {
     copiedToClipboard: 'Copiado para a área de transferência',
     fileDownloaded: 'Arquivo baixado',
     linkWord: 'LINK',
-    pageTitle: 'Catálogo'
+    pageTitle: 'Catálogo',
+    searchPlaceholder: 'Pesquisar por nome, ano, código...',
+    searchNoResults: 'Nenhum resultado',
+    favorites: 'Favoritos',
+    noFavorites: 'Sem favoritos'
   }
 };
 

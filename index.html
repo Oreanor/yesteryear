@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,15 +13,14 @@
 <body>
   <div class="toolbar">
     <button type="button" id="modeToggle" class="mode-toggle">Каталог</button>
-    <span id="loadJsonWrap">
-      <input type="file" id="fileInput" accept=".json">
-      <button type="button" id="loadBtn" data-t="loadJson">Загрузить JSON</button>
-    </span>
+    <input type="file" id="fileInput" accept=".json" style="display:none">
     <select id="sortSelect">
       <option value="name" data-t="sortByName">По названию</option>
       <option value="code" data-t="sortByCode">По коду</option>
       <option value="year" data-t="sortByYear">По году</option>
     </select>
+    <input type="text" id="searchInput" class="toolbar-search" autocomplete="off">
+    <button type="button" id="favoritesBtn" class="mode-gallery" title="Favorites">♡</button>
     <button type="button" id="addPhotoBtn" class="mode-editor" data-t="addPhoto">Добавить фото</button>
     <input type="file" id="addPhotoInput" accept="image/*" multiple style="display:none">
     <button type="button" id="copyBtn" class="mode-editor" data-t="copyJson">Копировать JSON</button>

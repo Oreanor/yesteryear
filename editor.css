@@ -83,10 +83,32 @@ td input:focus {
 .toast.show { opacity: 1; }
 
 .table-empty {
-  padding: 32px;
+  padding: 48px 32px;
   text-align: center;
-  color: var(--text-dim);
+  vertical-align: middle;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
+
+.table-empty .empty-load-btn {
+  padding: 12px 24px;
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+  background: var(--input-bg);
+  color: var(--text);
+  font-size: 15px;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.table-empty .empty-load-btn:hover {
+  background: var(--btn-hover);
+}
+
+tr.search-hidden { display: none; }
 
 @media (min-width: 768px) {
   .table-wrap { padding: 20px; }
