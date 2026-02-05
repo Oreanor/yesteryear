@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог</title>
+  <link rel="stylesheet" href="theme-colors.css">
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="editor.css">
+  <script src="theme.js"></script>
+</head>
+<body>
+  <div class="toolbar">
+    <button type="button" id="modeToggle" class="mode-toggle">Каталог</button>
+    <span id="loadJsonWrap">
+      <input type="file" id="fileInput" accept=".json">
+      <button type="button" id="loadBtn" data-t="loadJson">Загрузить JSON</button>
+    </span>
+    <select id="sortSelect">
+      <option value="name" data-t="sortByName">По названию</option>
+      <option value="code" data-t="sortByCode">По коду</option>
+      <option value="year" data-t="sortByYear">По году</option>
+    </select>
+    <button type="button" id="addPhotoBtn" class="mode-editor" data-t="addPhoto">Добавить фото</button>
+    <input type="file" id="addPhotoInput" accept="image/*" multiple style="display:none">
+    <button type="button" id="copyBtn" class="mode-editor" data-t="copyJson">Копировать JSON</button>
+    <button type="button" id="saveBtn" class="mode-editor" data-t="saveJson">Скачать JSON</button>
+    <span class="bar-spacer"></span>
+    <select id="themeSelect">
+      <option value="light">☀</option>
+      <option value="dark">🌙</option>
+    </select>
+    <select id="langSelect">
+      <option value="ru">RU</option>
+      <option value="en">EN</option>
+      <option value="pt">PT</option>
+    </select>
+  </div>
+
+  <div id="viewGallery" class="view">
+    <div class="main">
+      <div class="gallery-container">
+        <div class="gallery" id="gallery"></div>
+      </div>
+    </div>
+    <div class="modal-overlay" id="modalOverlay">
+      <button type="button" class="modal-nav modal-nav-left" id="modalPrev">‹</button>
+      <button type="button" class="modal-nav modal-nav-right" id="modalNext">›</button>
+      <div class="modal" id="modal">
+        <button type="button" class="modal-close" id="modalClose">×</button>
+        <div id="modalContent"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="viewEditor" class="view hidden">
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th data-t="preview">Превью</th>
+            <th data-t="name">Название</th>
+            <th data-t="year">Год</th>
+            <th data-t="code">Код</th>
+            <th data-t="file">Файл</th>
+            <th data-t="link">Ссылка</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="translations.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
